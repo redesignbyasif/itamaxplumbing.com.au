@@ -15,7 +15,7 @@ A premium, mobile-first homepage redesign concept for **ITA MAX PLUMBING PTY LTD
 index.html            Homepage
 css/style.css         All styles (CSS variables, mobile-first)
 js/script.js          Mobile menu, service preview, FAQ, quote builder, floating CTA, reveal
-assets/logo/          ITA MAX logo (clean vector redraw of the original + PNG)
+assets/logo/          ITA MAX logo: transparent PNG of the original wordmark (header + footer); circular mark used for favicons
 assets/images/        Optimised WebP photography + OG image
 assets/icons/         Favicons + icon sprite source
 assets/fonts/         Oswald & Manrope (woff2, latin)

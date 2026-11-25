@@ -42,10 +42,15 @@
   /* ---------- Header shadow + floating call button ---------- */
   var fab = doc.getElementById('fab');
   var hero = doc.querySelector('.hero');
+  var footer = doc.querySelector('.footer');
   function onScroll() {
     var y = window.scrollY || window.pageYOffset;
     header.classList.toggle('is-scrolled', y > 10);
-    if (fab && hero) fab.classList.toggle('is-visible', y > hero.offsetTop + hero.offsetHeight - 200);
+    if (fab && hero) {
+      var footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
+      // show after the hero, hide again once the footer (which has its own contact links) comes into view
+      fab.classList.toggle('is-visible', y > hero.offsetTop + hero.offsetHeight - 200 && footerTop > window.innerHeight - 40);
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
